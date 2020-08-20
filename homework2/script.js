@@ -359,7 +359,7 @@ for (let index = 0; index < arr60.length; index++) {
 // 3. перебрати циклом while та вивести  числа тільки з непарним індексом
 let y = 0;
 while (y < arr60.length) {
-  if (y % 2 === 0) {
+  if (y % 2 === 1) {
     console.log(arr60[y]);
   }
   y++;
@@ -367,7 +367,7 @@ while (y < arr60.length) {
 
 // 4. перебрати циклом for та вивести  числа тільки з непарним індексом
 for (let i = 0; i < arr60.length; i++) {
-  if (i % 2 === 0) {
+  if (i % 2 === 1) {
     console.log(arr60[i]);
   }
 }
@@ -382,14 +382,97 @@ while (g < arr60.length) {
 }
 // 6. перебрати циклом for та вивести  числа тільки парні  значення
 for (let i = 0; i < arr60.length; i++) {
-  if (i % 2 === 0) {
+  if (arr60[i] % 2 === 0) {
     console.log(arr60[i]);
   }
 }
+
 // 7. замінити кожне число кратне 3 на слово "okten"
+let arr61 = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
+for (let word of arr61) {
+  if (word % 3 === 0) {
+    word = "okten";
+  }
+  console.log(word);
+}
+
+for (let i = 0; i < arr61.length; i++) {
+  if (arr61[i] % 3 === 0) {
+    arr61[i] = "okten";
+  }
+}
+console.log(arr61);
+
 // 8. вивести масив в зворотньому порядку.
+let arr62 = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
+console.log(arr62.reverse());
+
 // 9. всі попередні завдання(окрім 8), але в зворотньому циклі(с заду на перед)
+let arr63 = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
+newArr = arr63.reverse();
+
+elem = 0;
+while (elem < arr63.length) {
+  console.log(newArr[elem]);
+  elem++;
+}
+
+for (let index = 0; index < arr63.length; index++) {
+  console.log(newArr[index]);
+}
+
+wh = 0;
+while (wh < arr63.length) {
+  if (wh % 2 === 1) {
+    console.log(newArr[wh]);
+  }
+  wh++;
+}
+
+for (let index = 0; index < arr63.length; index++) {
+  if (index % 2 === 0) {
+    console.log(newArr[index]);
+  }
+}
+
+cap = 0;
+while (cap < arr63.length) {
+  if (arr63[cap] % 2 === 0) {
+    console.log(newArr[cap]);
+  }
+  cap++;
+}
+
+for (let index = 0; index < arr63.length; index++) {
+  if (arr63[index] % 2 === 0) {
+    console.log(newArr[index]);
+  }
+}
+
+for (let rev of arr63) {
+  if (rev % 3 === 0) {
+    rev = "okten";
+  }
+  console.log(rev);
+}
+
 // 10
 // створити пустий масив та:
+let arr64 = [];
+
 // - заповнити його 50 парними числами за допомоги циклу.
+for (let index = 0; index < 100; index++) {
+  if (index % 2 === 0) {
+    arr64[index] = index;
+  }
+}
+console.log(arr64);
+
 // - заповнити його 50 непарними числами за допомоги циклу.
+let arr65 = [];
+for (let index = 0; index < 100; index++) {
+  if (index % 2 === 1) {
+    arr65[index] = index;
+  }
+}
+console.log(arr65);
