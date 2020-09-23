@@ -11,6 +11,6 @@ export class PostResolveService implements Resolve<Post[]> {
   constructor(private postService: PostService) {}
 
   resolve(): Observable<Post[]> | Promise<Post[]> | Post[] {
-    return this.postService.getPosts();
+    return this.postService.getAllPosts();
   }
 }

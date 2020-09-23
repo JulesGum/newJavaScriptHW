@@ -12,6 +12,7 @@ import { PostComponent } from './entity/post/components/post/post.component';
 import { AllCommentsComponent } from './entity/comment/components/all-comments/all-comments.component';
 import { CommentComponent } from './entity/comment/components/comment/comment.component';
 import { PostResolveService } from './entity/post/services/post-resolve.service';
+import { CommentResolveService } from './entity/comment/services/comment-resolve.service';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,11 @@ import { PostResolveService } from './entity/post/services/post-resolve.service'
         path: 'posts',
         component: AllPostsComponent,
         resolve: { yyy: PostResolveService },
+      },
+      {
+        path: 'comments',
+        component: AllCommentsComponent,
+        resolve: { zzz: CommentResolveService },
       },
     ]),
   ],
