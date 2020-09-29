@@ -15,6 +15,7 @@ import { PostResolveService } from './entity/post/services/post-resolve.service'
 import { CommentResolveService } from './entity/comment/services/comment-resolve.service';
 import { UserDetailsComponent } from './entity/user/user-details/user-details.component';
 import { UserDetailsTwoComponent } from './entity/user/user-details-two/user-details-two.component';
+import { UserDetailsTreeComponent } from './entity/user/user-details-tree/user-details-tree.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { UserDetailsTwoComponent } from './entity/user/user-details-two/user-det
     CommentComponent,
     UserDetailsComponent,
     UserDetailsTwoComponent,
+    UserDetailsTreeComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,9 @@ import { UserDetailsTwoComponent } from './entity/user/user-details-two/user-det
         resolve: { xxx: UserResolveService },
         children: [
           // { path: 'details/:id', component: UserDetailsComponent }
-          { path: 'details/:id', component: UserDetailsTwoComponent },
+          // { path: 'details/:id', component: UserDetailsTwoComponent },
+          { path: 'details/:id', component: UserDetailsTreeComponent },
+          { path: 'posts', component: AllPostsComponent },
         ],
       },
       {
