@@ -13,6 +13,8 @@ import { AllCommentsComponent } from './entity/comment/components/all-comments/a
 import { CommentComponent } from './entity/comment/components/comment/comment.component';
 import { PostResolveService } from './entity/post/services/post-resolve.service';
 import { CommentResolveService } from './entity/comment/services/comment-resolve.service';
+import { UserDetailsComponent } from './entity/user/user-details/user-details.component';
+import { UserDetailsTwoComponent } from './entity/user/user-details-two/user-details-two.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { CommentResolveService } from './entity/comment/services/comment-resolve
     PostComponent,
     AllCommentsComponent,
     CommentComponent,
+    UserDetailsComponent,
+    UserDetailsTwoComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +37,10 @@ import { CommentResolveService } from './entity/comment/services/comment-resolve
         path: 'users',
         component: AllUsersComponent,
         resolve: { xxx: UserResolveService },
+        children: [
+          // { path: 'details/:id', component: UserDetailsComponent }
+          { path: 'details/:id', component: UserDetailsTwoComponent },
+        ],
       },
       {
         path: 'posts',
