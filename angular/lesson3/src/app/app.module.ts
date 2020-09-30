@@ -22,7 +22,7 @@ import { UserDetailsTreeComponent } from './entity/user/user-details-tree/user-d
     AppComponent,
     UserComponent,
     AllUsersComponent,
-    AllPostsComponent,
+    // AllPostsComponent,
     PostComponent,
     AllCommentsComponent,
     CommentComponent,
@@ -46,11 +46,11 @@ import { UserDetailsTreeComponent } from './entity/user/user-details-tree/user-d
           { path: 'posts', component: AllPostsComponent },
         ],
       },
-      {
-        path: 'posts',
-        component: AllPostsComponent,
-        resolve: { yyy: PostResolveService },
-      },
+      // {
+      //   path: 'posts',
+      //   component: AllPostsComponent,
+      //   resolve: { yyy: PostResolveService },
+      // },
       {
         path: 'comments',
         component: AllCommentsComponent,
