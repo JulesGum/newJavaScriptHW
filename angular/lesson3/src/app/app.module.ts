@@ -16,13 +16,13 @@ import { CommentResolveService } from './entity/comment/services/comment-resolve
 import { UserDetailsComponent } from './entity/user/user-details/user-details.component';
 import { UserDetailsTwoComponent } from './entity/user/user-details-two/user-details-two.component';
 import { UserDetailsTreeComponent } from './entity/user/user-details-tree/user-details-tree.component';
+import { PostModule } from './modules/post/post.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     AllUsersComponent,
-    // AllPostsComponent,
     PostComponent,
     AllCommentsComponent,
     CommentComponent,
@@ -34,6 +34,7 @@ import { UserDetailsTreeComponent } from './entity/user/user-details-tree/user-d
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    PostModule,
     RouterModule.forRoot([
       {
         path: 'users',
