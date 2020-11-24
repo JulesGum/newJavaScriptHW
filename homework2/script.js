@@ -530,5 +530,39 @@ let arr71 = arr70.reduce(reduser);
 console.log(arr71 / arr70.length);
 
 // створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
+let arr80 =[]
+for (let i = 0; i < 5; i++) {
+  arr80[i] = Math.floor(Math.random() * (101 - 0) + 0)
+}
+console.log(arr80)
+
+let arr81 =[]
+for (let i = 0; i < 5; i++) {
+  arr81[i] = arr80[i]*5
+}
+console.log (arr81)
+
 // створити масив з будь якими значеннями(стрінги, числа, і тд...).пройтись по ньому, і якщо об'єкт є числом,
 // додати його в інший масив
+let arr82 = [
+  23,
+  "Spring",
+  true,
+  NaN,
+  null,
+  undefined,
+  ["dad", "son"],
+  -5,
+  "$",
+  false,
+];
+console.log(arr82)
+let arr83 = []
+for (let i = 0; i < arr82.length; i++) {
+  if (typeof arr82[i] === 'number') {
+    arr83.push(arr82[i])
+  }
+}
+console.log(arr83)
+
+
