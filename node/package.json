@@ -1,9 +1,10 @@
 {
-  "name": "NodeJS",
+  "name": "node",
   "version": "0.0.0",
   "scripts": {},
   "private": true,
   "dependencies": {
+    "exemple": "0.0.1",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0"
   },
