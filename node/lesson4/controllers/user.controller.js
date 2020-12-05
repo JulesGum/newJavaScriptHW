@@ -31,10 +31,8 @@ module.exports = {
 
     getUsers: async (req, res) => {
         try {
-            const [users] = await userService.findUsers();
-
-            console.log(users);
-
+            const users = await userService.findUsers();
+            
             res.json(users);
         } catch (e) {
             res.status(400).json(e.message)

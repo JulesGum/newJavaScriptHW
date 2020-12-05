@@ -1,16 +1,20 @@
-const db = require('../dataBase')
+const db = require('../dataBase').getInstance();
 
 module.exports = {
     findUsers: () => {
-        return db.query('SELECT * FROM users');
+        const UserModel = db.getModel('User');
+
+        return UserModel.findAll();
     },
 
     insertUser: (user) => {
-        return db.query(`ISERT INTO users (emaill) VALUE (${user.email})`)
+        const UserModel = db.getModel('User');
+
+        return UserModel.create(user);
     },
 
-    findUserById: () => {
-         // dataBase[userId],       
+    findUserById: (userId) => {
+        const UserModel = db.getModel('User');
+        return UserModel.findByPk(userId);
     }
-
-}
+};
