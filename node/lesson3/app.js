@@ -16,7 +16,7 @@ app.engine('.hbs', expressHbs({
 }));
 app.set('views', path.join(process.cwd(), 'views'));
 
-const userRouter = require('./routes');
+const {userRouter, prodRouter, authRouter} = require('./routes');
 
 app.use('/users', userRouter);
 

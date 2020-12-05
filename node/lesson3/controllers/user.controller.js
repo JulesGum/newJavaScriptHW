@@ -29,6 +29,16 @@ module.exports = {
         }    
     },
 
+        getUsers: (req, res) => {
+        try {
+            const x = req.query;
+            console.log(x);
+        res.json(xxxx);
+            } catch (e) {
+        res.status(400).json(e.message)
+        }    
+    },
+
     deleteUser: (req, res) => {
         try {
         res.json('User deleted');           
