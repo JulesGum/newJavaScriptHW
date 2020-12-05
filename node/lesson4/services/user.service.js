@@ -2,11 +2,11 @@ const db = require('../dataBase')
 
 module.exports = {
     findUsers: () => {
-        return db.query('select * from users')
+        return db.query('SELECT * FROM users');
     },
 
-    insertUser: () => {
-        // dataBase.push(user);
+    insertUser: (user) => {
+        return db.query(`ISERT INTO users (emaill) VALUE (${user.email})`)
     },
 
     findUserById: () => {
