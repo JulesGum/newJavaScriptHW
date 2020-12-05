@@ -26,13 +26,13 @@ module.exports = (() => {
         const modelsPath = path.join(process.cwd(), 'dataBase', 'models');
 
         const getModels = () => {
-            fs.readdir(modelsPath), (err, files) => {
+            fs.readdir(modelsPath, (err, files) => {
                 files.forEach((file) => {
                     const [model] = file.split('.');
                     const modelFile = require(path.join(modelsPath, model));
                     models[model] = modelFile(client, DataTypes);
                 });
-            };
+            });
         };
 
         return {
