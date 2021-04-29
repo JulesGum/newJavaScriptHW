@@ -1,6 +1,8 @@
 // - создать 5 объектов. В каждом объекте не менее 3х полей. Все объекты разные по набору полей. 
 // (Т.е поле name  должно присутствовать только 1 раз в одном объекте )
 
+
+
 const dog1 = {
     name: 'Umka',
     age: 8,
@@ -84,7 +86,7 @@ console.log(Object.keys(people2));
 // - Создать массив из 10 объектов cars и заполнить его машинами с полями модель, год выпуска, мощность, цвет. 
 // (Значаения полей могу быть выдуманными)
 
-const cars = [
+const cars1 = [
     {manufacturer: 'Nissan', color: 'white', production: 2010, power:200},
     {manufacturer: 'KIA', color: 'green', production: 2001, power:210},
     {manufacturer: 'Opel', color: 'blue', production: 1986, power:178},
@@ -94,14 +96,28 @@ const cars = [
 // - Создать массив объектов cities и заполнить его объектами с полями название, популяция, страна, регион. 
 // (Значаения полей могу быть выдуманными)
 
-const cities = [
+const cities1 = [
     {name: 'Kyiv', population: '5 mln', country: 'Ukraine', region:'Kyivskyy'},
-    {manufacturer: 'KIA', color: 'green', production: 2001, power:210},
-    {manufacturer: 'Opel', color: 'blue', production: 1986, power:178},
+    {name: 'Vinnynsya', population: '3 mln', country: 'Ukraine', region:'Vinytskyy'},
+    {name: 'Kharkiv', population: '4 mln', country: 'Ukraine', region:'Kharkivskyy'},
 ];
 
-// - Создать массив объектов cars и заполнить его машинами с полями модель, год выпуска, мощность, цвет, водитель. Водитель является отдельным объектом с полями имя, возраст, пол, стаж.
+// - Создать массив объектов cars и заполнить его машинами с полями модель, год выпуска, мощность, цвет, водитель. 
+// Водитель является отдельным объектом с полями имя, возраст, пол, стаж.
+
+const cars2 = [
+    { manufacturer: 'Nissan', color: 'white', production: 2010, power: 200, driver: { name: 'Vasya', age: 23, sex: 'man', experience: 5}},
+    {manufacturer: 'KIA', color: 'green', production: 2001, power:210, driver: { name: 'Sasha', age: 33, sex: 'man', experience: 10}},
+    {manufacturer: 'Opel', color: 'blue', production: 1986, power:178, driver: { name: 'Petya', age: 35, sex: 'man', experience: 16}},
+];
+
 // - проитерировать каждый массив из задания 5,6,7 при помощи while.
+i = 0;
+while ( i < cars1.length ) {
+    console.log(`${cars1[i].manufacturer} - ${cars1[i].color} - ${cars1[i].production} - ${cars1[i].power}`);
+    i++;
+}
+
 // - проитерировать каждый массив из задания 5,6,7 при помощи for .
 // - проитерировать каждый массив из задания 5,6,7 при помощи  for of.
 // - взять объекты из задания 1 и превратить каждый в json.
